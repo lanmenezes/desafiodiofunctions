@@ -4,6 +4,7 @@
 This project provides an Azure Function that converts JSON input into an Excel (.xlsx) file.  
 The function receives a HTTP request containing a filename and a list of JSON objects.  
 After validating the input, the service converts the data into a Pandas DataFrame and generates an Excel file in memory, returning it as a Base64 string.
+This function is part of a project where a Logic App sends the data to the function and receives the file back in Base64 format, which is then used to send an email afterward.
 
 ---
 
