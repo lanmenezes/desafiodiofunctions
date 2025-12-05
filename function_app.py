@@ -9,7 +9,7 @@ import pandas as pd
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
 @app.route(route="JsontoExcel")
-def CampanhasMarketing_JsontoExcel(req: func.HttpRequest) -> func.HttpResponse:
+def Files_JsontoExcel(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
    
@@ -42,7 +42,7 @@ def CampanhasMarketing_JsontoExcel(req: func.HttpRequest) -> func.HttpResponse:
             mimetype="application/json"
         )
 
-    accepted_files = ["Hierarquia LG.xlsx", "Hierarquia Midea.xlsx", "Hierarquia TCL.xlsx"]
+    accepted_files = ["Hierarquia.xlsx", "Qqcoisa.xlsx", "Desafio.xlsx"]
     
     if file_name not in accepted_files:
         return func.HttpResponse(
